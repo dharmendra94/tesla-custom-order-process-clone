@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "tesla-custom-order-process-clone"
+    }
+  },
+  "defaultProject": "tesla-custom-order-process-clone",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
