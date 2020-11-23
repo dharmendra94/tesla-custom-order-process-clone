@@ -1,0 +1,20 @@
+.footer {
+  // position: fixed;
+  bottom: 0px;
+  height: 90px;
+  background-color: #333;
+  width: 100%;
+  padding: 10px 0;
+  color: #fff;
+}
+
+.nav-item {
+  padding: 0 40px;
+  &:first-child {
+    padding: 0 25px;
+  }
+  &:nth-child(3) {
+    flex: 1;
+    justify-content: right;
+  }
+}

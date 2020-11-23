@@ -1,0 +1,15 @@
+<div>
+  <h3>Summary</h3>
+  <hr />
+  <div *ngIf="carSummary$ | async as carSummary">
+    <ul>
+      <li class="feature-item">{{ driveTypes[carSummary.drive.drive] }}</li>
+      <li class="feature-item">{{ carSummary.exterior.color.name }}</li>
+      <li class="feature-item">{{ carSummary.interior.name }}</li>
+      <li class="feature-item">Autopilot</li>
+      <li class="feature-item" *ngIf="carSummary.autopilot.isFullSelfDrivingIncluded">
+        Full Self Driving Capability
+      </li>
+    </ul>
+  </div>
+</div>

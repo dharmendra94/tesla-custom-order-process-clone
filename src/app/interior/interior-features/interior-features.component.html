@@ -1,0 +1,8 @@
+<div>
+  <h4 style="margin-top:1em;">Includes: </h4>
+  <ul>
+    <li *ngFor="let feature of interiorFeatures$ | async" class="feature-item">
+      {{ feature }}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,9 @@
+<button
+  mat-flat-button
+  color="primary"
+  class="btn-next"
+  (click)="routeTo()"
+  [disabled]="!(placeOrderActive$ | async) && buttonText === 'Place Order'"
+>
+  {{ buttonText }}
+</button>

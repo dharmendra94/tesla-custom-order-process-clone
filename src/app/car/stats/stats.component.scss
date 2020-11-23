@@ -1,0 +1,25 @@
+.specs-item {
+  width: 240px;
+  border-right: 1px solid #ddd;
+  text-align: center;
+  position: relative;
+
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.spec-value {
+  color: #000;
+  font-size: 42px;
+  display: block;
+  line-height: 38px;
+  position: relative;
+}
+
+.spec-label {
+  font-size: 15px;
+  text-align: center;
+  padding-top: 10px;
+  display: block;
+}

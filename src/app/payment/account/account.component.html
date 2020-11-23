@@ -1,0 +1,46 @@
+<div class="account-content">
+  <form [formGroup]="accountForm" class="form">
+    <h2>Enter Account Details</h2>
+    <div class="ts-flex name-section">
+      <mat-form-field class="form-item">
+        <mat-label>First Name</mat-label>
+        <input type="text" matInput formControlName="firstName" />
+        <mat-error *ngIf="firstName.hasError('required')">
+          First Name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-item">
+        <mat-label>Last Name</mat-label>
+        <input type="text" matInput formControlName="lastName" />
+        <mat-error *ngIf="lastName.hasError('required')">
+          Last Name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="form-item">
+        <mat-label>Email</mat-label>
+        <input type="text" matInput formControlName="email" />
+        <mat-error
+          *ngIf="email.hasError('email') && !email.hasError('required')"
+          >Please enter a valid email address</mat-error
+        >
+        <mat-error *ngIf="email.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="form-item">
+        <mat-label>Phone</mat-label>
+        <input type="text" matInput formControlName="phone" />
+        <mat-error *ngIf="phone.hasError('required')">
+          Phone is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,12 @@
+.asset-loader-2 {
+  transition: height .2s ease-in-out,opacity .2s ease-in-out;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.battery-drive--asset
+{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}

@@ -1,0 +1,12 @@
+.tab-content {
+  color: #666;
+  padding: 15px;
+  & > * {
+    margin-bottom: 15px;
+  }
+}
+
+.cost {
+  color: black;
+  font-size: 22px;
+}

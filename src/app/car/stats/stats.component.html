@@ -1,0 +1,47 @@
+<ul style="list-style-type: none; display: flex">
+  <li class="specs-item">
+    <span
+      class="spec-value"
+      counto
+      [step]="5"
+      [countTo]="carSpecifications.range"
+      [countFrom]="0"
+      [duration]="0.5"
+      (countoChange)="range = $event"
+    >
+      {{ range | number: "1.0-0" }}
+      <span class="spec-value-label">mi</span>
+    </span>
+    <span class="spec-label">Range (est.)</span>
+  </li>
+  <li class="specs-item">
+    <span
+      class="spec-value"
+      counto
+      [step]="5"
+      [countTo]="carSpecifications.topSpeed"
+      [countFrom]="0"
+      [duration]="0.5"
+      (countoChange)="topSpeed = $event"
+    >
+      {{ topSpeed | number: "1.0-0" }}
+      <span class="spec-value-label">mi</span></span
+    >
+    <span class="spec-label">Top Speed</span>
+  </li>
+  <li class="specs-item">
+    <span
+      class="spec-value"
+      counto
+      [step]="5"
+      [countTo]="carSpecifications.zeroToSixty"
+      [countFrom]="0"
+      [duration]="0.5"
+      (countoChange)="zeroToSixty = $event"
+    >
+      {{ zeroToSixty | number: "1.0-0" }}
+      <span class="spec-value-label">mi</span></span
+    >
+    <span class="spec-label">0-60 mph</span>
+  </li>
+</ul>

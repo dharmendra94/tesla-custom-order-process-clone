@@ -1,0 +1,14 @@
+<nav mat-tab-nav-bar mat-align-tabs="center">
+  <a mat-tab-link class="logo">Tesla clone</a>
+  <a
+    mat-tab-link
+    *ngFor="let tab of navTabs"
+    [routerLink]="tab.route"
+    (click)="onTabClick(tab)"
+    routerLinkActive
+    #rla="routerLinkActive"
+    [active]="rla.isActive"
+  >
+    {{ tab.label }}
+  </a>
+</nav>

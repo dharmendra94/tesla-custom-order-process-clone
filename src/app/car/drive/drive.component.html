@@ -1,0 +1,42 @@
+<div class="car-drive-section">
+  <h1>Select Your Car</h1>
+
+  <span>All cars have a power trunk, glass roof, and Autopilot</span>
+
+  <h3 class="sub-heading">Rear-Wheel Drive</h3>
+
+  <button
+    mat-stroked-button
+    color="primary"
+    class="btn-300 btn-margin"
+    [class.active]="drive.StandardRangePlus === selectedDrive"
+    (click)="onDriveTypeChange(drive.StandardRangePlus)"
+  >
+    Standard Range Plus
+  </button>
+
+  <h3 class="sub-heading">Dual Motor All-Wheel Drive</h3>
+
+  <div>
+    <button
+      mat-stroked-button
+      color="primary"
+      class="btn-300 btn-margin"
+      [class.active]="drive.LongRange === selectedDrive"
+      (click)="onDriveTypeChange(drive.LongRange)"
+    >
+      Long Range
+    </button>
+  </div>
+  <div>
+    <button
+      mat-stroked-button
+      color="primary"
+      class="btn-300 btn-margin"
+      [class.active]="drive.Performance === selectedDrive"
+      (click)="onDriveTypeChange(drive.Performance)"
+    >
+      Performance
+    </button>
+  </div>
+</div>

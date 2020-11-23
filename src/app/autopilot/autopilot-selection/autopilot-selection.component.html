@@ -1,0 +1,35 @@
+<div *ngIf="autopilotState$ | async as autopilot">
+  <h2>Full Self-Driving Capability</h2>
+
+  <div class="full-self-driving-option">
+    <mat-checkbox
+      class="example-margin"
+      [checked]="autopilot.isFullSelfDrivingIncluded"
+      (change)="onSelectionChange($event, autopilot)"
+      >Select Option</mat-checkbox
+    >
+  </div>
+
+  <div>
+    <ul>
+      <li
+        *ngFor="let selfDrivingFeature of autopilot.fullSelfDrivingFeatures"
+        class="feature-item"
+      >
+        {{ selfDrivingFeature }}
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>Upcoming Features</h2>
+    <ul>
+      <li
+        *ngFor="let upcomingFeature of autopilot.upcomingFeatures"
+        class="feature-item"
+      >
+        {{ upcomingFeature }}
+      </li>
+    </ul>
+  </div>
+</div>

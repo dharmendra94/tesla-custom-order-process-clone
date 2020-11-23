@@ -1,0 +1,67 @@
+<div>
+  <h1>Select Interior</h1>
+  <div class="ts-flex">
+    <svg
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      class="asset-loader--svg-container asset-loader-2 group--options_asset color-icon"
+      style="overflow: hidden; opacity: 1; transform: scale(1); height: 60px"
+      *ngFor="let interior of availableInteriors"
+      (click)="toggleInterior(interior)"
+    >
+      <defs>
+        <clipPath
+          id="clip_https:__static-assets.tesla.com_share_tesla_design_studio_assets_MODEL3_UI_ui_swat_int_white.png__version_v0028d202011190440_IPW0__asset__false"
+        >
+          <circle
+            cx="50%"
+            cy="50%"
+            r="24"
+            fill="#FFFFFF"
+            stroke="#007fff"
+            stroke-width="0"
+            *ngIf="currentInterior && currentInterior.id === interior.id"
+          ></circle>
+        </clipPath>
+        <filter
+          id="filter_https:__static-assets.tesla.com_share_tesla_design_studio_assets_MODEL3_UI_ui_swat_int_white.png__version_v0028d202011190440_IPW0__asset__false"
+          height="200%"
+        >
+          <feGaussianBlur in="SourceAlpha" stdDeviation="1"></feGaussianBlur>
+          <feComponentTransfer>
+            <feFuncA type="linear" slope="0.3"></feFuncA>
+          </feComponentTransfer>
+          <feOffset dx="1.3" dy="1.5" result="offsetblur"></feOffset>
+          <feMerge>
+            <feMergeNode></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>
+      </defs>
+      <circle
+        cx="50%"
+        cy="50%"
+        r="45%"
+        stroke="#007fff"
+        stroke-width="4%"
+        fill="white"
+        fill-opacity="0"
+        *ngIf="currentInterior && currentInterior.id === interior.id"
+      ></circle>
+      <image
+        width="75%"
+        height="75%"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        [attr.href]="interior.icon"
+        preserveAspectRatio="xMidYMid meet"
+        [attr.alt]="interior.name"
+        clip-path="url(#clip_https://static-assets.tesla.com/share/tesla_design_studio_assets/MODEL3/UI/ui_swat_int_white.png?&amp;version=v0028d202011190440$IPW0__asset__false)"
+        x="12.5%"
+        y="12.5%"
+      ></image>
+    </svg>
+  </div>
+  <div *ngIf="currentInterior">
+    {{currentInterior.name}}
+  </div>
+</div>

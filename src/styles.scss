@@ -1,1 +1,78 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.ts-flex {
+  display: flex;
+}
+
+.ts-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.ts-flex-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ts-align-center {
+  align-items: center;
+}
+
+.btn-300 {
+  width: 300px;
+  border-radius: 25px !important;
+  height: 50px;
+}
+
+.ts-underline {
+  text-decoration: underline;
+}
+
+.main-content {
+  position: relative;
+  padding-top: 49px;
+  padding-bottom: 90px;
+  height: calc(100% - 139px);
+}
+
+
+.ts-height-100 {
+  height: 100%;
+}
+
+.ts-width-100 {
+  width: 100%;
+}
+
+.ts-look-side {
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #ddd;
+  flex-grow: 3;
+  flex-shrink: 3;
+  flex-basis: 0;
+  overflow: hidden;
+  align-items: center;
+  height: 100%;
+}
+
+.color-icon {
+  width: 60px;
+  cursor: pointer;
+  margin-right: 2em;
+}
+
+.feature-item {
+  color: #666;
+  margin-bottom: 0.6em;
+}
+

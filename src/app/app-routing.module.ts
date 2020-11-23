@@ -4,9 +4,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const routes: Routes = [
   {
-    path: 'ngrx',
+    path: '',
+    redirectTo: 'model3',
+    pathMatch: 'full'
+  },
+  {
+    path: 'model3',
     loadChildren: () =>
-      import('./ng-rx-test/ng-rx-test.module').then((m) => m.NgRxTestModule),
+      import('./model3/model3.module').then((m) => m.Model3Module),
   },
   {
     path: '**',

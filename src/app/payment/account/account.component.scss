@@ -1,0 +1,27 @@
+.form-item {
+  width: 100%;
+}
+
+.form {
+  width: 75%;
+  background: #fff;
+  border-radius: 15px;
+  padding: 50px;
+  margin: auto;
+
+  & > * {
+    margin-bottom: 20px;
+  }
+}
+
+.account-content {
+  width: 100%;
+  padding: 50px;
+  border-radius: 15px;
+  background: #f4f4f4;
+  height: 100%;
+}
+
+.name-section:nth-child(1) {
+  margin-right: 20px;
+}

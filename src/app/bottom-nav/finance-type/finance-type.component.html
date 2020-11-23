@@ -1,0 +1,17 @@
+<mat-form-field class="finance-type">
+  <mat-select
+    (selectionChange)="onFinanceTypeChange($event)"
+    [value]="currentFinanceType"
+  >
+    <mat-option [value]="financeType.Cash" selected>Cash</mat-option>
+    <mat-option [value]="financeType.Lease">Lease</mat-option>
+    <mat-option [value]="financeType.Loan">Loan</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<!-- <button mat-button [matMenuTriggerFor]="menu"></button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Cash</button>
+  <button mat-menu-item>Lease</button>
+  <button mat-menu-item>Loan</button>
+</mat-menu> -->
