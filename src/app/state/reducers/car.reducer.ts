@@ -15,7 +15,7 @@ const standardRangePlusDriveState: DriveState = {
 
 const longRangeDriveState: DriveState = {
   drive: DriveTypes.LongRange,
-  look: exteriorLook(DriveTypes.StandardRangePlus, 2, 1),
+  look: exteriorLook(DriveTypes.LongRange, 1, 1),
   range: 353,
   topSpeed: 145,
   zeroToSixty: 4.2,
@@ -23,7 +23,7 @@ const longRangeDriveState: DriveState = {
 
 const performanceDriveState: DriveState = {
   drive: DriveTypes.Performance,
-  look: assets.performanceLook,
+  look: exteriorLook(DriveTypes.Performance, 1, 3),
   range: 315,
   topSpeed: 162,
   zeroToSixty: 3.1,

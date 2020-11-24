@@ -17,6 +17,18 @@ export const exteriorLookMap: Map<string, string> = new Map([
   ['0_4_2', '/assets/standard-blue-19inchwheels.jpg'],
   ['0_5_2', '/assets/standard-deepred-19inchwheels.jpg'],
 
+  ['1_1_1', '/assets/long-range-white.jpg'],
+  ['1_2_1', '/assets/long-range-black.jpg'],
+  ['1_3_1', '/assets/long-range-silver.jpg'],
+  ['1_4_1', '/assets/long-range-blue.jpg'],
+  ['1_5_1', '/assets/long-range-red.jpg'],
+
+  ['1_1_2', '/assets/long-range-white-sport.jpg'],
+  ['1_2_2', '/assets/long-range-black-sport.jpg'],
+  ['1_3_2', '/assets/long-range-silver-sport.jpg'],
+  ['1_4_2', '/assets/long-range-blue-sport.jpg'],
+  ['1_5_2', '/assets/long-range-red-sport.jpg'],
+
   ['2_1_3', '/assets/performance-white-turbine-wheels.jpg'],
   ['2_2_3', '/assets/performance-black-turbine-wheels.jpg'],
   ['2_3_3', '/assets/performance-midnightsilver-turbine-wheels.jpg'],
