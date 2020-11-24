@@ -14,5 +14,5 @@ export const getFinanceOptions = createSelector(
 export const getFinanceSummary = createSelector(
   getFinanceSummaryState,
   getCarDrive,
-  (finance, drive) => ({ ...finance, drive })
+  (finance, drive) => ({ ...finance, drive: drive.drive.drive })
 );

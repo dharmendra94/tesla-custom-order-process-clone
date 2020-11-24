@@ -10,11 +10,11 @@ export const getExteriorPaintLook = createSelector(
   (state) => state.look
 );
 
-export const getExteriorPaint = createSelector(
+export const getExteriorandDrive = createSelector(
   getCarState,
   getDriveState,
-  (state, drive) => {
-    return { color: state.color, drive: drive.drive };
+  (exterior, drive) => {
+    return { exterior, drive: drive.drive };
   }
 );
 

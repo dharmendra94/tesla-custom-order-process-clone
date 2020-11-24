@@ -2,3 +2,8 @@
   border-radius: 25px;
   width: 350px;
 }
+
+.disabled-place-order {
+  pointer-events: none;
+  color: lightgray;
+}

@@ -3,8 +3,9 @@ import { Paint } from '../../state/models/exterior-color';
 import { exteriorColors } from '../../state/constants/model3-assets';
 import { Store } from '@ngrx/store';
 import { toggleExteriorColor } from '../../state/actions/exterior.actions';
-import { getExteriorPaint } from 'src/app/state/selectors/exterior.selectors';
+import { getExteriorandDrive } from 'src/app/state/selectors/exterior.selectors';
 import { DriveTypes } from '../../state/enums/drive-types';
+import { Exterior } from 'src/app/state/models/exterior';
 
 @Component({
   selector: 'ext-exterior-paint',
@@ -13,12 +14,12 @@ import { DriveTypes } from '../../state/enums/drive-types';
 })
 export class ExteriorPaintComponent implements OnInit {
   exteriorColors: Paint[] = exteriorColors;
-  currentExteriorColor: Paint;
+  currentExterior: Exterior;
   currentDriveType: DriveTypes;
 
   constructor(private store: Store<any>) {
-    this.store.select(getExteriorPaint).subscribe((state) => {
-      this.currentExteriorColor = state.color;
+    this.store.select(getExteriorandDrive).subscribe((state) => {
+      this.currentExterior = state.exterior;
       this.currentDriveType = state.drive;
     });
   }
@@ -28,7 +29,7 @@ export class ExteriorPaintComponent implements OnInit {
   changeColor(color: Paint): void {
     this.store.dispatch(
       toggleExteriorColor({
-        exteriorColor: color,
+        exterior: { look: '', color: color, wheels: this.currentExterior.wheels },
         drive: this.currentDriveType,
       })
     );

@@ -20,7 +20,7 @@
             fill="#FFFFFF"
             stroke="#007fff"
             stroke-width="0"
-            *ngIf="currentExteriorColor.id === color.id"
+            *ngIf="currentExterior?.color?.id === color.id"
           ></circle>
         </clipPath>
         <filter
@@ -46,7 +46,7 @@
         stroke-width="4%"
         fill="white"
         fill-opacity="0"
-        *ngIf="currentExteriorColor.id === color.id"
+        *ngIf="currentExterior.color.id === color.id"
       ></circle>
       <image
         width="75%"
@@ -62,6 +62,6 @@
     </svg>
   </div>
   <h3 class="label">
-    {{ currentExteriorColor?.name }}
+    {{ currentExterior?.color?.name }}
   </h3>
 </div>

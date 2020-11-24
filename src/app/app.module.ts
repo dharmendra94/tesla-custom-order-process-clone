@@ -15,6 +15,7 @@ import { interiorReducer } from './state/reducers/interior.reducer';
 import { autopilotReducer } from './state/reducers/autopilot.reducer';
 import { placeOrderReducer } from './state/reducers/place-order.reducer';
 import { paymentReducer } from './state/reducers/payment.reducer';
+import { carLookReducer } from './state/reducers/car-look.reducer';
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent],
@@ -30,6 +31,7 @@ import { paymentReducer } from './state/reducers/payment.reducer';
         autopilot: autopilotReducer,
         accountDetails: paymentReducer,
         isPlaceOrderActive: placeOrderReducer,
+        look: carLookReducer
       },
       {}
     ),

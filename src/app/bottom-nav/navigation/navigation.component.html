@@ -3,7 +3,7 @@
   color="primary"
   class="btn-next"
   (click)="routeTo()"
-  [disabled]="!(placeOrderActive$ | async) && buttonText === 'Place Order'"
+  [class.disabled-place-order]="!(placeOrderActive$ | async) && buttonText === 'Place Order'"
 >
   {{ buttonText }}
 </button>

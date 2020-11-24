@@ -1,4 +1,4 @@
-<div class="car-drive-section">
+<div class="car-drive-section" *ngIf="state">
   <h1>Select Your Car</h1>
 
   <span>All cars have a power trunk, glass roof, and Autopilot</span>
@@ -9,8 +9,8 @@
     mat-stroked-button
     color="primary"
     class="btn-300 btn-margin"
-    [class.active]="drive.StandardRangePlus === selectedDrive"
-    (click)="onDriveTypeChange(drive.StandardRangePlus)"
+    [class.active]="driveTypes.StandardRangePlus === state.drive.drive"
+    (click)="onDriveTypeChange(driveTypes.StandardRangePlus)"
   >
     Standard Range Plus
   </button>
@@ -22,8 +22,8 @@
       mat-stroked-button
       color="primary"
       class="btn-300 btn-margin"
-      [class.active]="drive.LongRange === selectedDrive"
-      (click)="onDriveTypeChange(drive.LongRange)"
+      [class.active]="driveTypes.LongRange === state.drive.drive"
+      (click)="onDriveTypeChange(driveTypes.LongRange)"
     >
       Long Range
     </button>
@@ -33,8 +33,8 @@
       mat-stroked-button
       color="primary"
       class="btn-300 btn-margin"
-      [class.active]="drive.Performance === selectedDrive"
-      (click)="onDriveTypeChange(drive.Performance)"
+      [class.active]="driveTypes.Performance === state.drive.drive"
+      (click)="onDriveTypeChange(driveTypes.Performance)"
     >
       Performance
     </button>

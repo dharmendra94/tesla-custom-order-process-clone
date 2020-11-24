@@ -1,9 +1,9 @@
 import { createReducer, on } from '@ngrx/store';
 import * as CarCustomization from '../../state/actions/car-customization-actions';
-import * as assets from '../../../assets/model3';
 import { DriveState } from '../models/DriveState';
 import { DriveTypes } from '../enums/drive-types';
 import { exteriorLook } from '../constants/model3-assets';
+import { Exterior } from '../models/exterior';
 
 const standardRangePlusDriveState: DriveState = {
   drive: DriveTypes.StandardRangePlus,
@@ -31,7 +31,7 @@ const performanceDriveState: DriveState = {
 
 const initialState: DriveState = { ...standardRangePlusDriveState };
 
-const driveState = (drive: DriveTypes) => {
+const driveState = (drive: DriveTypes, exterior: Exterior) => {
   switch (drive) {
     case DriveTypes.StandardRangePlus:
       return standardRangePlusDriveState;
@@ -47,7 +47,7 @@ export const carReducer = createReducer<DriveState>(
   on(
     CarCustomization.toggleDriveType,
     (state, action): DriveState => {
-      return { ...state, ...driveState(action.drive) };
+      return { ...state, ...driveState(action.drive, action.exterior) };
     }
   )
 );

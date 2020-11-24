@@ -22,7 +22,7 @@
               fill="#FFFFFF"
               stroke="#007fff"
               stroke-width="0"
-              *ngIf="currentWheelType.id === wheel.id"
+              *ngIf="currentExterior?.wheels?.id === wheel.id"
             ></circle>
           </clipPath>
           <filter
@@ -48,7 +48,7 @@
           stroke-width="4%"
           fill="white"
           fill-opacity="0"
-          *ngIf="currentWheelType.id === wheel.id"
+          *ngIf="currentExterior?.wheels?.id === wheel.id"
         ></circle>
         <image
           width="75%"
@@ -67,5 +67,5 @@
   </div>
 </div>
 <h3 class="label">
-  {{ currentWheelType?.name }}
+  {{ currentExterior?.wheels?.name }}
 </h3>

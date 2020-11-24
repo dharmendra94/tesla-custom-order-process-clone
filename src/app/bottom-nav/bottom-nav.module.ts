@@ -8,6 +8,7 @@ import { EstimatedDeliveryComponent } from './estimated-delivery/estimated-deliv
 import { NavigationComponent } from './navigation/navigation.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
 import { FinanceTypeComponent } from './finance-type/finance-type.component';
 import { RouterModule } from '@angular/router';
 
@@ -25,7 +26,8 @@ import { RouterModule } from '@angular/router';
     MatSelectModule,
     MatMenuModule,
     StoreModule,
-    RouterModule
+    RouterModule,
+    MatDialogModule,
   ],
   exports: [BottomNavBarComponent],
 })

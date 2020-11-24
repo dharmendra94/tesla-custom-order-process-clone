@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { getCarLook } from 'src/app/state/selectors/car.selectors';
+import { getCarLookState } from '../../state/selectors/car-look.selectors';
 
 @Component({
   selector: 'car-look',
@@ -11,7 +11,7 @@ export class LookComponent implements OnInit {
   look: string;
 
   constructor(private store: Store<any>) {
-    this.store.select(getCarLook).subscribe((look) =>  (this.look = look));
+    this.store.select(getCarLookState).subscribe((look) =>  (this.look = look));
   }
 
   ngOnInit(): void {}

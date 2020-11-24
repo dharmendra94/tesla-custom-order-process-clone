@@ -2,9 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Wheel } from '../../state/models/wheel';
 import { wheelTypes } from '../../state/constants/model3-assets';
-import { getWheelType } from '../../state/selectors/exterior.selectors';
+import {
+  getExteriorandDrive,
+} from '../../state/selectors/exterior.selectors';
 import { toggleWheelType } from '../../state/actions/exterior.actions';
 import { DriveTypes } from '../../state/enums/drive-types';
+import { Exterior } from 'src/app/state/models/exterior';
 
 @Component({
   selector: 'ext-wheels',
@@ -14,14 +17,14 @@ import { DriveTypes } from '../../state/enums/drive-types';
 export class WheelsComponent implements OnInit {
   wheelTypes: Wheel[] = wheelTypes;
 
-  currentWheelType: Wheel;
+  currentExterior: Exterior;
   currentDriveType: DriveTypes;
 
   driveTypes = DriveTypes;
 
   constructor(private store: Store<any>) {
-    this.store.select(getWheelType).subscribe((state) => {
-      this.currentWheelType = state.wheels;
+    this.store.select(getExteriorandDrive).subscribe((state) => {
+      this.currentExterior = state.exterior;
       this.currentDriveType = state.drive;
     });
   }
@@ -30,7 +33,14 @@ export class WheelsComponent implements OnInit {
 
   changeWheelType(wheel: Wheel): void {
     this.store.dispatch(
-      toggleWheelType({ wheelType: wheel, drive: this.currentDriveType })
+      toggleWheelType({
+        exterior: {
+          color: this.currentExterior.color,
+          look: '',
+          wheels: wheel,
+        },
+        drive: this.currentDriveType,
+      })
     );
   }
 

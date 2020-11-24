@@ -3,6 +3,8 @@ import { Wheel } from '../models/wheel';
 import { DriveTypes } from '../enums/drive-types';
 import { Interior } from '../models/interior';
 import { InteriorTypes } from '../enums/interior-types';
+import { WheelTypes } from '../enums/wheel-types';
+import { ExteriorColors } from '../enums/exterior-colors';
 
 export const exteriorLookMap: Map<string, string> = new Map([
   ['0_1_1', '/assets/standard-range-white.jpg'],
@@ -87,35 +89,35 @@ export const upcomingFeatures: string[] = ['Autosteer on city streets.'];
 export const exteriorColors: Paint[] = [
   {
     name: 'Pearl White Multi-Coat',
-    id: 1,
+    id: ExteriorColors['Pearl White Multi-Coat'],
     cost: 0,
     icon:
       'https://static-assets.tesla.com/share/tesla_design_studio_assets/MODEL3/UI/ui_swat_col_ppsw.png?&version=v0028d202011190440',
   },
   {
     name: 'Solid Black',
-    id: 2,
+    id: ExteriorColors['Solid Black'],
     cost: 1000,
     icon:
       'https://static-assets.tesla.com/share/tesla_design_studio_assets/MODEL3/UI/ui_swat_col_pbsb.png?&version=v0028d202011190440',
   },
   {
     name: 'Midnight Silver Metallic',
-    id: 3,
+    id: ExteriorColors['Midnight Silver Metallic'],
     cost: 1000,
     icon:
       'https://static-assets.tesla.com/share/tesla_design_studio_assets/MODEL3/UI/ui_swat_col_pmng.png?&version=v0028d202011190440',
   },
   {
     name: 'Deep Blue Metallic',
-    id: 4,
+    id: ExteriorColors['Deep Blue Metallic'],
     cost: 1000,
     icon:
       'https://static-assets.tesla.com/share/tesla_design_studio_assets/MODEL3/UI/ui_swat_col_ppsb.png?&version=v0028d202011190440',
   },
   {
     name: 'Red Multi-Coat',
-    id: 5,
+    id: ExteriorColors['Red Multi-Coat'],
     cost: 2000,
     icon:
       'https://static-assets.tesla.com/share/tesla_design_studio_assets/MODEL3/UI/ui_swat_col_ppmr.png?&version=v0028d202011190440',
@@ -125,28 +127,23 @@ export const exteriorColors: Paint[] = [
 export const wheelTypes: Wheel[] = [
   {
     name: '18" Aero wheels',
-    id: 1,
+    id: WheelTypes['18" Aero Wheels'],
     icon:
       'https://static-assets.tesla.com/share/tesla_design_studio_assets/MODEL3/UI/option-wheels-18-aero.png?&version=v0028d202011190440',
-    // look:
-    //   'https://static-assets.tesla.com/configurator/compositor?&options=$MT314,$PPMR,$W40B,$IBB0&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202011190440&crop=0,0,0,0&version=v0028d202011190440',
     cost: 0,
   },
   {
     name: '19" Aero wheels',
-    id: 2,
+    id: WheelTypes['19" Sport Wheels'],
     icon:
       'https://static-assets.tesla.com/share/tesla_design_studio_assets/MODEL3/UI/option-wheels-19-sport.png?&version=v0028d202011190440',
-    // look:
-    //   'https://static-assets.tesla.com/configurator/compositor?&options=$MT314,$PPMR,$W41B,$IBB0&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202011190440&crop=0,0,0,0&version=v0028d202011190440',
     cost: 1500,
   },
   {
     name: '20’’ Überturbine Wheels',
-    id: 3,
+    id: WheelTypes['20" Ubeerturbine Wheels'],
     icon:
       'https://static-assets.tesla.com/share/tesla_design_studio_assets/MODEL3/UI/option-wheels-20-uberturbine.png?&version=v0028d202011190440',
-    // look: 'https://static-assets.tesla.com/configurator/compositor?&options=$MT317,$PPSW,$W33D,$IPB0,$SLR1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202011190440&crop=0,0,0,0&version=v0028d202011190440',
     cost: 0,
   },
 ];
