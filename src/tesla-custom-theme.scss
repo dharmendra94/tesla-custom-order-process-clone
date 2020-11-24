@@ -1,0 +1,80 @@
+@import "~@angular/material/theming";
+// Plus imports for other components in your app.
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$custom-typography: mat-typography-config(
+  $font-family: "Roboto, monospace",
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500),
+);
+
+@mixin mat-select-white() {
+  .mat-select-white
+    > div.mat-select-trigger
+    > div.mat-select-arrow-wrapper
+    > div.mat-select-arrow {
+    color: #fff;
+  }
+
+  .mat-select-white > div.mat-select-trigger > div.mat-select-value {
+    color: #fff !important;
+  }
+
+  mat-form-field.finance-type
+    > div.mat-form-field-wrapper
+    > div.mat-form-field-underline {
+    background-color: #fff !important;
+  }
+}
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+
+// Override the typography in the core CSS.
+@include mat-core($custom-typography);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+
+$primary: (
+  Main: #3e6ae1,
+  Light: #7b98ff,
+  Dark: #0040ae,
+  contrast: (
+    Main: #ffffff,
+    Light: #ffffff,
+    Dark: #ffffff,
+  ),
+);
+
+$accent: (
+  Main: #333333,
+  Light: #5c5c5c,
+  Dark: #0c0c0c,
+  contrast: (
+    Main: #ffffff,
+    Light: #ffffff,
+    Dark: #ffffff,
+  ),
+);
+
+$tesla-custom-primary: mat-palette($primary, Main, Light, Dark);
+$tesla-custom-accent: mat-palette($accent, Main, Light, Dark);
+
+// The warn palette is optional (defaults to red).
+$tesla-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$candy-app-theme: mat-light-theme(
+  $tesla-custom-primary,
+  $tesla-custom-accent,
+  $tesla-warn
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($candy-app-theme);
+@include mat-select-white();

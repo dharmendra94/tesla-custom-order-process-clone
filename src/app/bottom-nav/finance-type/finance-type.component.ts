@@ -10,8 +10,7 @@ import { FinanceType } from 'src/app/state/enums/purchase-type';
 @Component({
   selector: 'btmn-finance-type',
   templateUrl: './finance-type.component.html',
-  styleUrls: ['./finance-type.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./finance-type.component.scss']
 })
 export class FinanceTypeComponent implements OnInit {
   financeType = FinanceType;
