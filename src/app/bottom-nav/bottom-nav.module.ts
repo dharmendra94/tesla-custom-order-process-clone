@@ -11,6 +11,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FinanceTypeComponent } from './finance-type/finance-type.component';
 import { RouterModule } from '@angular/router';
+import { SuccessDialogComponent } from './success-dialog/success-dialog.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { RouterModule } from '@angular/router';
     EstimatedDeliveryComponent,
     NavigationComponent,
     FinanceTypeComponent,
+    SuccessDialogComponent
   ],
   imports: [
     CommonModule,
