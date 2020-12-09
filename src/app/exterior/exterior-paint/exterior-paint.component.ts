@@ -29,7 +29,7 @@ export class ExteriorPaintComponent implements OnInit {
   changeColor(color: Paint): void {
     this.store.dispatch(
       toggleExteriorColor({
-        exterior: { look: '', color: color, wheels: this.currentExterior.wheels },
+        exterior: { color, wheels: this.currentExterior.wheels },
         drive: this.currentDriveType,
       })
     );

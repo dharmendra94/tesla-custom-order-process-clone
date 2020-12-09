@@ -5,10 +5,10 @@ import { Exterior } from '../models/exterior';
 const getCarState = createFeatureSelector<Exterior>('exterior');
 const getDriveState = createFeatureSelector<DriveState>('drive');
 
-export const getExteriorPaintLook = createSelector(
-  getCarState,
-  (state) => state.look
-);
+// export const getExteriorPaintLook = createSelector(
+//   getCarState,
+//   (state) => state.look
+// );
 
 export const getExteriorandDrive = createSelector(
   getCarState,

@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Wheel } from '../../state/models/wheel';
 import { wheelTypes } from '../../state/constants/model3-assets';
-import {
-  getExteriorandDrive,
-} from '../../state/selectors/exterior.selectors';
+import { getExteriorandDrive } from '../../state/selectors/exterior.selectors';
 import { toggleWheelType } from '../../state/actions/exterior.actions';
 import { DriveTypes } from '../../state/enums/drive-types';
 import { Exterior } from 'src/app/state/models/exterior';
@@ -36,7 +34,6 @@ export class WheelsComponent implements OnInit {
       toggleWheelType({
         exterior: {
           color: this.currentExterior.color,
-          look: '',
           wheels: wheel,
         },
         drive: this.currentDriveType,
@@ -45,7 +42,7 @@ export class WheelsComponent implements OnInit {
   }
 
   isWheelTypeAvailable(wheel: Wheel): boolean {
-    if (this.currentDriveType === DriveTypes.Performance && wheel.id === 3) {
+    if (this.isPerformanceWheelTypeAvailable(wheel)) {
       return true;
     }
 
@@ -57,5 +54,9 @@ export class WheelsComponent implements OnInit {
     }
 
     return false;
+  }
+
+  private isPerformanceWheelTypeAvailable(wheel: Wheel): boolean {
+    return this.currentDriveType === DriveTypes.Performance && wheel.id === 3;
   }
 }

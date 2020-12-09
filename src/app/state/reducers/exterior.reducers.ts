@@ -5,13 +5,11 @@ import * as carDriveCustomizationActions from '../actions/car-customization-acti
 import {
   exteriorColors,
   wheelTypes,
-  exteriorLook,
 } from '../constants/model3-assets';
 import { DriveTypes } from '../enums/drive-types';
 import { WheelTypes } from '../enums/wheel-types';
 
 const standardRangeExterior: Exterior = {
-  look: '/assets/standard-range-white.jpg',
   color: exteriorColors.find((f) => f.id === WheelTypes['18" Aero Wheels']),
   wheels: wheelTypes.find((f) => f.id === WheelTypes['18" Aero Wheels']),
 };
